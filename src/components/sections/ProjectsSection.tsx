@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, X } from "lucide-react";
 import { GithubIcon } from "@/components/ui/SocialIcons";
@@ -18,6 +19,8 @@ function ProjectCard({
   project: Project;
   onClick: () => void;
 }) {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 32 }}
@@ -29,21 +32,29 @@ function ProjectCard({
       className="glass-card rounded-2xl overflow-hidden cursor-pointer group flex flex-col"
     >
       {/* Thumbnail */}
-      <div className="relative h-44 bg-gradient-to-br from-[var(--bg-elevated)] to-[var(--bg-card)] overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          {/* Fallback gradient placeholder for thumbnail */}
+      <div className="relative h-48 bg-gradient-to-br from-[var(--bg-elevated)] to-[var(--bg-card)] overflow-hidden">
+        {project.image && !imgError ? (
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            onError={() => setImgError(true)}
+          />
+        ) : (
           <div className="w-full h-full bg-gradient-to-br from-violet-primary/20 to-violet-secondary/10 flex items-center justify-center">
             <span className="font-display text-4xl font-bold text-[var(--accent-primary)] opacity-40">
               {project.title.charAt(0)}
             </span>
           </div>
-        </div>
+        )}
         {project.featured && (
-          <span className="absolute top-3 left-3 text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full bg-[var(--accent-primary)] text-white">
+          <span className="absolute top-3 left-3 text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full bg-[var(--accent-primary)] text-white shadow-md z-10">
             Featured
           </span>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)] via-transparent to-transparent pointer-events-none" />
       </div>
 
       {/* Body */}
@@ -110,6 +121,8 @@ function ProjectModal({
   project: Project;
   onClose: () => void;
 }) {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <AnimatePresence>
       <motion.div
@@ -125,17 +138,29 @@ function ProjectModal({
           exit={{ scale: 0.92, opacity: 0, y: 24 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           onClick={(e) => e.stopPropagation()}
-          className="glass-card rounded-2xl w-full max-w-2xl overflow-hidden"
+          className="glass-card rounded-2xl w-full max-w-2xl overflow-hidden shadow-2xl"
         >
           {/* Header */}
-          <div className="relative h-48 bg-gradient-to-br from-violet-primary/30 to-violet-secondary/10 flex items-center justify-center">
-            <span className="font-display text-6xl font-bold text-[var(--accent-primary)] opacity-30">
-              {project.title.charAt(0)}
-            </span>
+          <div className="relative h-56 bg-gradient-to-br from-violet-primary/30 to-violet-secondary/10 flex items-center justify-center overflow-hidden">
+            {project.image && !imgError ? (
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 700px"
+                className="object-cover object-top"
+                onError={() => setImgError(true)}
+              />
+            ) : (
+              <span className="font-display text-6xl font-bold text-[var(--accent-primary)] opacity-30">
+                {project.title.charAt(0)}
+              </span>
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)]/80 via-transparent to-black/30 pointer-events-none" />
             <button
               onClick={onClose}
               aria-label="Close modal"
-              className="absolute top-4 right-4 p-2 rounded-xl bg-black/30 text-white hover:bg-black/50 transition-colors"
+              className="absolute top-4 right-4 p-2 rounded-xl bg-black/50 text-white hover:bg-black/70 transition-colors z-10"
             >
               <X size={18} />
             </button>

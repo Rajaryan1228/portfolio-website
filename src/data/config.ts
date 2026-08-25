@@ -10,7 +10,7 @@ export const siteConfig = {
   tagline: "I build fast, thoughtful software and solve hard problems.",
   bio: [
     "I'm a Computer Science student with a passion for building elegant, performant web applications and tackling algorithmic challenges.",
-    "I love working across the full stack — from crafting pixel-perfect UIs to designing robust backend systems. When I'm not coding, you'll find me grinding competitive programming contests or exploring new tech.",
+    "I’m particularly interested in building scalable systems, exploring intelligent applications, and finding elegant solutions to complex problems. I’m constantly learning, experimenting with new technologies, and pushing myself to become a better problem solver and engineer.",
   ],
   location: "India", // optional — set to "" to hide
   email: "rajanaryan25@gmail.com",
@@ -34,7 +34,7 @@ export const siteConfig = {
   seo: {
     description:
       "Raj Aryan — Full-Stack Developer & CS Student. Building fast, elegant web apps and solving hard problems.",
-    url: "https://rajaryane.dev", // REPLACE with your actual domain
+    url: "https://portfolio-website-ten-rho-83.vercel.app/https://portfolio-website-ten-rho-83.vercel.app/", // REPLACE with your actual domain
     ogImage: "/og-image.png",
   },
 };
@@ -92,7 +92,7 @@ export const projects = [
       "A minimal, elegant 3D-accented personal portfolio built with Next.js, React Three Fiber, and Framer Motion. Features smooth scroll animations, dark/light mode, and coding stats.",
     tech: ["Next.js", "TypeScript", "Three.js", "Framer Motion", "Tailwind"],
     repoUrl: "https://github.com/Rajaryan1228", // REPLACE
-    liveUrl: "", // REPLACE or leave ""
+    liveUrl: "https://portfolio-website-ten-rho-83.vercel.app/", // REPLACE or leave ""
     image: "/projects/portfolio.png", // place image in /public/projects/
     featured: true,
   },
@@ -126,7 +126,7 @@ export const projects = [
       "Machine learning regression model trained on housing datasets to predict real estate prices based on location, square footage, and amenities.",
     tech: ["Python", "Scikit-Learn", "Pandas", "Flask", "NumPy"],
     repoUrl: "https://github.com/Rajaryan1228/bangalore-price-predictor",
-    liveUrl: "",
+    liveUrl: "https://bangalore-price-predictor-yp25.onrender.com/",
     image: "/projects/price-predictor.png",
     featured: false,
   },
