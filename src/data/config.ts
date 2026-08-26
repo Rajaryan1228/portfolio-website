@@ -91,7 +91,7 @@ export const projects = [
     description:
       "A minimal, elegant 3D-accented personal portfolio built with Next.js, React Three Fiber, and Framer Motion. Features smooth scroll animations, dark/light mode, and coding stats.",
     tech: ["Next.js", "TypeScript", "Three.js", "Framer Motion", "Tailwind"],
-    repoUrl: "https://github.com/Rajaryan1228", // REPLACE
+    repoUrl: "https://github.com/Rajaryan1228/portfolio-website", // REPLACE
     liveUrl: "https://portfolio-website-ten-rho-83.vercel.app/", // REPLACE or leave ""
     image: "/projects/portfolio.png", // place image in /public/projects/
     featured: true,
@@ -115,7 +115,7 @@ export const projects = [
       "A comprehensive MERN stack job portal serving Applicants and Recruiters. Features role-based dashboards, job posting & application tracking, profile management, JWT authentication, and Cloudinary media uploads.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Redux Toolkit", "Tailwind CSS", "Cloudinary", "JWT"],
     repoUrl: "https://github.com/Rajaryan1228/Opportune-fullstack",
-    liveUrl: "",
+    liveUrl: "https://opportune-frontend-six.vercel.app/",
     image: "/projects/opportune.png",
     featured: true,
   },

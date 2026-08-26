@@ -88,7 +88,10 @@ npm i -g vercel && vercel
 
 ---
 
-## 🗂️ Project Structure
+## 🗂️ Project 
+
+git add . && git commit -m "Update portfolio content" && git push origin main
+
 
 ```
 src/
