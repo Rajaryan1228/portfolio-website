@@ -14,7 +14,7 @@ export const siteConfig = {
   ],
   location: "India", // optional — set to "" to hide
   email: "rajanaryan25@gmail.com",
-  resumeUrl: "/resume.pdf", // place your resume in /public/resume.pdf
+  resumeUrl: "/Resume.pdf", // place your resume in /public/resume.pdf
 
   social: {
     github: "https://github.com/Rajaryan1228",
