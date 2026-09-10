@@ -21,14 +21,12 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/in/raj-aryan", // REPLACE with your real LinkedIn URL
     twitter: "", // Add your Twitter/X URL or leave empty
     leetcode: "https://leetcode.com/u/Logic_lord_108/",
-    codechef: "https://www.codechef.com/users/anteambulo",
   },
 
   // Coding profile usernames — used for stats API calls
   codingProfiles: {
     github: "Rajaryan1228",
     leetcode: "Logic_lord_108",
-    codechef: "anteambulo",
   },
 
   seo: {

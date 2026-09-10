@@ -296,75 +296,7 @@ function LeetCodeCard() {
   );
 }
 
-// ─── CodeChef card (static showcase — CodeChef blocks all server-side APIs) ──
-function CodeChefCard() {
-  const { codechef } = siteConfig.codingProfiles;
 
-  // ✏️ Update these manually from codechef.com/users/anteambulo
-  const manualStats = [
-    { label: "Current Rating", value: 1800 },
-    { label: "Highest Rating", value: 1956 },
-    { label: "Global Rank",    value: 5420 },
-    { label: "Country Rank",   value: 312  },
-  ];
-  const stars = "4★"; // ✏️ update from your profile
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-      className="glass-card rounded-2xl p-6 flex flex-col gap-5"
-    >
-      <div className="flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full bg-[#1e1e1e] flex items-center justify-center flex-shrink-0">
-          <svg viewBox="0 0 24 24" className="w-5 h-5" fill="#5B4638" aria-hidden="true">
-            <path d="M11.257.004C5.055.194.214 5.343.004 11.545c-.21 6.285 4.814 11.498 11.099 11.498.106 0 .213-.002.32-.004.098.002.196.004.295.004 6.202 0 11.24-5.058 11.24-11.26C22.958 5.1 17.664-.186 11.257.004zm1.092 18.362l-.012.058-.016.055-.018.052-.023.05-.026.047-.03.044-.033.041-.036.037-.039.034-.042.03-.045.027-.047.022-.05.017-.052.013-.054.007-.056.002-.056-.002-.054-.007-.052-.013-.05-.017-.048-.022-.045-.027-.042-.03-.038-.034-.037-.037-.033-.041-.03-.044-.026-.047-.023-.05-.018-.052-.016-.055-.012-.058-.007-.059-.002-.06.002-.06.007-.059.012-.058.016-.055.018-.052.023-.05.026-.047.03-.044.033-.041.037-.037.038-.034.042-.03.045-.027.048-.022.05-.017.052-.013.054-.007.056-.002.056.002.054.007.052.013.05.017.047.022.045.027.042.03.039.034.036.037.033.041.03.044.026.047.023.05.018.052.016.055.012.058.007.059.002.06-.002.06-.007.059zM7.77 13.67l-1.74 1.74a.84.84 0 01-1.188-1.188l1.74-1.74-1.74-1.74A.84.84 0 015.03 9.554l1.74 1.74 1.74-1.74a.84.84 0 011.188 1.188L8.958 12.48l1.74 1.74a.84.84 0 01-1.188 1.188L7.77 13.67zm7.68 2.94a4.678 4.678 0 01-3.44-1.5.84.84 0 011.23-1.146 2.994 2.994 0 002.21.966c1.656 0 3.003-1.347 3.003-3.003S17.106 9 15.45 9a3 3 0 00-2.21.966.84.84 0 01-1.23-1.146 4.68 4.68 0 013.44-1.5c2.688 0 4.683 2.146 4.683 4.607s-1.995 4.683-4.683 4.683z" />
-          </svg>
-        </div>
-        <div>
-          <p className="font-semibold text-[var(--text-primary)] text-sm">CodeChef</p>
-          <a href={siteConfig.social.codechef} target="_blank" rel="noopener noreferrer"
-            className="text-xs text-[var(--text-muted)] hover:text-[var(--accent-secondary)] flex items-center gap-1 transition-colors">
-            @{codechef} <ExternalLink size={10} />
-          </a>
-        </div>
-        <span className="ml-auto text-lg font-bold text-amber-400">{stars}</span>
-      </div>
-
-      {/* Gradient banner */}
-      <div className="relative rounded-xl overflow-hidden h-24 bg-gradient-to-br from-[#5B4638]/30 via-[var(--accent-primary)]/10 to-[#5B4638]/20 flex items-center justify-center border border-[var(--border)]">
-        <div className="absolute inset-0 flex items-center justify-center opacity-10">
-          <svg viewBox="0 0 24 24" className="w-20 h-20" fill="#5B4638">
-            <path d="M11.257.004C5.055.194.214 5.343.004 11.545c-.21 6.285 4.814 11.498 11.099 11.498.106 0 .213-.002.32-.004.098.002.196.004.295.004 6.202 0 11.24-5.058 11.24-11.26C22.958 5.1 17.664-.186 11.257.004z" />
-          </svg>
-        </div>
-        <div className="relative text-center">
-          <p className="font-display text-2xl font-bold text-amber-400">{stars}</p>
-          <p className="text-xs text-[var(--text-muted)] mt-0.5">@{codechef}</p>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-2 gap-3">
-        {manualStats.map((s) => (
-          <div key={s.label}
-            className="flex flex-col p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border)]">
-            <span className="text-2xl font-bold font-display text-[var(--accent-secondary)]">
-              <Counter value={s.value} />
-            </span>
-            <span className="text-[11px] text-[var(--text-muted)] mt-1">{s.label}</span>
-          </div>
-        ))}
-      </div>
-
-      <a href={siteConfig.social.codechef} target="_blank" rel="noopener noreferrer"
-        className="flex items-center justify-center gap-2 text-xs text-[var(--accent-secondary)] border border-[var(--border)] rounded-xl py-2.5 hover:border-[var(--accent-primary)] hover:bg-[var(--accent-primary)]/5 transition-all">
-        View full profile <ExternalLink size={11} />
-      </a>
-    </motion.div>
-  );
-}
 
 // ─── Main section ─────────────────────────────────────────────
 export default function CodingStatsSection() {
@@ -377,10 +309,9 @@ export default function CodingStatsSection() {
           subtitle="My competitive programming journey — updated automatically from live APIs."
           centered
         />
-        <div className="mt-16 grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="mt-16 grid md:grid-cols-1 lg:grid-cols-2 gap-6">
           <GitHubCard />
           <LeetCodeCard />
-          <CodeChefCard />
         </div>
       </div>
     </section>
