@@ -6,11 +6,11 @@
 
 export const siteConfig = {
   name: "Raj Aryan",
-  title: "Full-Stack Developer & CS Student",
+  title: "Full-Stack Developer & IT Student",
   tagline: "I build fast, thoughtful software and solve hard problems.",
   bio: [
-    "I'm a Computer Science student with a passion for building elegant, performant web applications and tackling algorithmic challenges.",
-    "I’m particularly interested in building scalable systems, exploring intelligent applications, and finding elegant solutions to complex problems. I’m constantly learning, experimenting with new technologies, and pushing myself to become a better problem solver and engineer.",
+    "I'm an Information Technology student at IIIT Allahabad with a strong interest in software engineering, AI/ML, and building practical applications. I enjoy turning ideas into working products and solving problems through code.",
+    "My experience includes full-stack development, backend engineering, and AI/ML applications. I've worked with React, Node.js, Python, REST APIs, databases, LangChain, and ChromaDB, and built projects ranging from a MERN job portal to a fully local RAG application. I'm constantly learning, experimenting with new technologies, and improving my problem-solving skills.",
   ],
   location: "India", // optional — set to "" to hide
   email: "rajanaryan25@gmail.com",
@@ -31,7 +31,7 @@ export const siteConfig = {
 
   seo: {
     description:
-      "Raj Aryan — Full-Stack Developer & CS Student. Building fast, elegant web apps and solving hard problems.",
+      "Raj Aryan — Full-Stack Developer & IT Student. Building fast, elegant web apps and solving hard problems.",
     url: "https://portfolio-website-ten-rho-83.vercel.app/https://portfolio-website-ten-rho-83.vercel.app/", // REPLACE with your actual domain
     ogImage: "/og-image.png",
   },

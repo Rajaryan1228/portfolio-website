@@ -10,24 +10,24 @@ const quickFacts = [
   {
     icon: <BookOpen size={18} />,
     label: "Education",
-    value: "B.Tech Computer Science",
+    value: "B.Tech Information Technology\nIIIT Allahabad",
   },
   {
     icon: <Code2 size={18} />,
     label: "Focus",
-    value: "Full-Stack · Competitive Programming",
+    value: "Software Engineering · AI/ML\nBackend · Full-Stack",
   },
   {
     icon: <Cpu size={18} />,
     label: "Interests",
-    value: "Algorithms · System Design · Open Source",
+    value: "LLMs · RAG · Algorithms\nSystem Design · Problem Solving",
   },
   ...(siteConfig.location
     ? [
         {
           icon: <MapPin size={18} />,
           label: "Location",
-          value: siteConfig.location,
+          value: `${siteConfig.location}\nOpen to Opportunities`,
         },
       ]
     : []),
@@ -107,7 +107,7 @@ export default function AboutSection() {
                     <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide mb-0.5">
                       {fact.label}
                     </p>
-                    <p className="text-sm text-[var(--text-primary)] font-medium">
+                    <p className="text-sm text-[var(--text-primary)] font-medium whitespace-pre-line">
                       {fact.value}
                     </p>
                   </div>
