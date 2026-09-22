@@ -67,7 +67,7 @@ Place thumbnail at `public/projects/my-project.png`.
 
 ## 🖼️ Replacing the Avatar
 
-Replace `public/avatar.jpg` with your real photo (square crop, min 400×400px).
+Replace `public/avatar.jpeg` with your real photo (square crop, min 400×400px).
 
 ---
 

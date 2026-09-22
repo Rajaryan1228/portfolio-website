@@ -58,7 +58,7 @@ export default function AboutSection() {
               {/* Border ring */}
               <div className="absolute inset-0 rounded-full border-2 border-[var(--accent-primary)] opacity-50" />
               <Image
-                src="/avatar.jpg"
+                src="/avatar.jpeg"
                 alt="Raj Aryan — profile photo"
                 fill
                 className="rounded-full object-cover object-top"
